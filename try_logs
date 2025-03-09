@@ -1,1 +1,615 @@
+GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+TE: 118649
 
+BL2 Built : 13:48:56, Sep 23 2016. 
+gxl g7459bd4 - jianxin.pan@droid06
+
+set vcck to 1120 mv
+set vddee to 1000 mv
+Board ID = 3
+CPU clk: 1200MHz
+DQS-corr enabled
+DDR scramble enabled
+DDR3 chl: Rank0+1 @ 912MHz - FAIL
+DDR3 chl: Rank0 @ 912MHz - PASS
+Rank0: 1024MB(auto)-2T-13
+DataBus test pass!
+AddrBus test pass!
+-s
+Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x00004000
+New fip structure!
+Load bl30 from eMMC, src: 0x00010200, des: 0x01100000, size: 0x0000d600
+Load bl31 from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00015400
+Load bl33 from eMMC, src: 0x00038200, des: 0x01000000, size: 0x000a9e00
+NOTICE:  BL3-1: v1.0(debug):34b885f
+NOTICE:  BL3-1: Built : 15:32:22, Oct 29 2016
+aml log : bl31 normal boot !
+[Image: gxl_v1.1.3154-065f772 2016-09-29 14:08:54 yan.wang@droid05]
+
+OPS=0x82
+
+6a 4c e1 b6 e8 22 80 9c c1 d b6 da [0.462200 Inits done]
+
+secure task start!
+high task start!
+low task start!
+INFO:    BL3-1: Initializing runtime services
+WARNING: No OPTEE provided by BL2 boot loader
+ERROR:   Error initializing runtime service opteed_fast
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x1000000
+INFO:    BL3-1: Next image spsr = 0x3c9
+
+
+U-Boot 2015.01 (Dec 07 2016 - 10:14:37)
+
+DRAM:  1 GiB
+Relocation Offset is: 36ec9000
+register usb cfg[0][1] = 0000000037f5f9a0
+vpu: error: vpu: check dts: FDT_ERR_BADMAGIC, load default parameters
+vpu: clk_level = 7
+vpu: set clk: 666667000Hz, readback: 666660000Hz(0x300)
+vpp: vpp_init
+boot_device_flag : 1
+Nand PHY Ver:1.01.001.0006 (c) 2013 Amlogic Inc.
+init bus_cycle=6, bus_timing=7, system=5.0ns
+reset failed
+get_chip_type and ret:fffffffe
+get_chip_type and ret:fffffffe
+chip detect failed and ret:fffffffe
+nandphy_init failed and ret=0xfffffff1
+MMC:   aml_priv->desc_buf = 0x0000000033ec96b0
+aml_priv->desc_buf = 0x0000000033ecb9d0
+SDIO Port B: 0, SDIO Port C: 1
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+[mmc_startup] mmc refix success
+[mmc_init] mmc init success
+mmc read lba=0x14000, blocks=0x400
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 2 dtbs.
+        aml_dt soc: gxl platform: p212 variant: 1g
+        dtb 0 soc: gxl   plat: p212   vari: 1g
+        dtb 1 soc: gxl   plat: p212   vari: 2g
+      Find match dtb: 0
+start dts,buffer=0000000033ece270,dt_addr=0000000033ecea70
+parts: 11
+00:      logo	0000000002000000 1
+01:  recovery	0000000002000000 1
+02:       rsv	0000000000800000 1
+03:       tee	0000000000800000 1
+04:     crypt	0000000002000000 1
+05:      misc	0000000002000000 1
+06: instaboot	0000000020000000 1
+07:      boot	0000000002000000 1
+08:    system	0000000040000000 1
+09:     cache	0000000020000000 2
+10:      data	ffffffffffffffff 4
+get_dtb_struct: Get emmc dtb OK!
+overide_emmc_partition_table: overide cache 
+[mmc_get_partition_table] skip partition cache.
+Partition table get from SPL is : 
+        name                        offset              size              flag
+===================================================================================
+   0: bootloader                         0            400000                  0
+   1: reserved                     2400000           4000000                  0
+   2: cache                        6c00000          20000000                  2
+   3: env                         27400000            800000                  0
+   4: logo                        28400000           2000000                  1
+   5: recovery                    2ac00000           2000000                  1
+   6: rsv                         2d400000            800000                  1
+   7: tee                         2e400000            800000                  1
+   8: crypt                       2f400000           2000000                  1
+   9: misc                        31c00000           2000000                  1
+  10: instaboot                   34400000          20000000                  1
+  11: boot                        54c00000           2000000                  1
+  12: system                      57400000          40000000                  1
+  13: data                        97c00000         13a400000                  4
+mmc read lba=0x12000, blocks=0x2
+mmc read lba=0x12002, blocks=0x2
+mmc_read_partition_tbl: mmc read partition OK!
+eMMC/TSD partition table have been checked OK!
+mmc env offset: 0x27400000 
+In:    serial
+Out:   serial
+Err:   serial
+reboot_mode=cold_boot
+hpd_state=0
+cvbs performance type = 6, table = 0
+[store]To run cmd[emmc dtb_read 0x1000000 0x40000]
+read emmc dtb
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 2 dtbs.
+        aml_dt soc: gxl platform: p212 variant: 1g
+        dtb 0 soc: gxl   plat: p212   vari: 1g
+        dtb 1 soc: gxl   plat: p212   vari: 2g
+      Find match dtb: 0
+Net:   dwmac.c9410000
+wipe_data=successful
+wipe_cache=successful
+upgrade_step=2
+[OSD]load fb addr from dts
+[OSD]failed to get fb addr for logo
+[OSD]use default fb_addr parameters
+[OSD]fb_addr for logo: 0x3d800000
+[OSD]load fb addr from dts
+[OSD]failed to get fb addr for logo
+[OSD]use default fb_addr parameters
+[OSD]fb_addr for logo: 0x3d800000
+[CANVAS]canvas init
+[CANVAS]addr=0x3d800000 width=3840, height=2160
+amlkey_init() enter!
+[EFUSE_MSG]keynum is 4
+[BL31]: tee size: 0
+[KM]Error:f[key_manage_query_size]L507:key[usid] not programed yet
+[KM]Error:f[key_manage_query_size]L507:key[deviceid] not programed yet
+get_cpu_id flag_12bit=1
+saradc - saradc sub-system
+
+Usage:
+saradc saradc open <channel>		- open a SARADC channel
+saradc close	- close the SARADC
+saradc getval	- get the value in current channel
+saradc get_in_range <min> <max>	- return 0 if current value in the range of current channel
+
+key1 = a857ff00
+key2 = a81bff00
+time_out = 2625a0
+ir init
+irkey - irkey key_value1 key_value2 time_value
+Usage:
+irkey 
+Hit Enter or space or Ctrl+C key to stop autoboot -- :  1  0 
+card out
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+emmc/sd response timeout, cmd1, status=0x1ff2800
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 1 Storage Device(s) found
+reading s905_autoscript
+1351 bytes read in 22 ms (59.6 KiB/s)
+## Executing script at 01020000
+start amlogic old u-boot
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+emmc/sd response timeout, cmd1, status=0x1ff2800
+** Bad device mmc 0 **
+reading boot_android
+** Unable to read file boot_android **
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+emmc/sd response timeout, cmd1, status=0x1ff2800
+** Bad device mmc 0 **
+reading u-boot.ext
+606670 bytes read in 354 ms (1.6 MiB/s)
+## Starting application at 0x01000000 ...
+
+
+U-Boot 2021.04-00056-g13ac02db31-dirty (Apr 28 2021 - 22:52:02 +0800) p212
+
+Model: Amlogic Meson GXL (S905X) P212 Development Board
+SoC:   Amlogic Meson GXL (S905X) Revision 21:a (82:2)
+DRAM:  1 GiB
+MMC:   mmc@70000: 0, mmc@72000: 1, mmc@74000: 2
+Loading Environment from nowhere... OK
+In:    serial
+Out:   serial
+Err:   serial
+[BL31]: tee size: 0
+[BL31]: tee size: 0
+Net:   eth0: ethernet@c9410000
+Hit any key to stop autoboot:  2  1  0 
+starting USB...
+Bus usb@c9000000: dwc3_meson_gxl_get_phys: usb2 ports: 2
+Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus usb@c9000000 for devices... XHCI timeout on event type 33... cannot recover.
+BUG at drivers/usb/host/xhci-ring.c:481/xhci_wait_for_event()!
+BUG!
+resetting ...
+INFO:    PSCI Affinity Map:
+INFO:      AffInst: Level 0, MPID 0x0, State ON
+INFO:      AffInst: Level 0, MPID 0x1, State OFF
+INFO:      AffInst: Level 0, MPID 0x2, State OFF
+INFO:      AffInst: Level 0, MPID 0x3, State OFF
+bl31 reboot reason: 0xd
+bl31 reboot reason: 0x0
+system cmd  1.
+
+GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+TE: 96232
+
+BL2 Built : 13:48:56, Sep 23 2016. 
+gxl g7459bd4 - jianxin.pan@droid06
+
+set vcck to 1120 mv
+set vddee to 1000 mv
+Board ID = 3
+CPU clk: 1200MHz
+DQS-corr enabled
+DDR scramble enabled
+DDR3 chl: Rank0+1 @ 912MHz - FAIL
+DDR3 chl: Rank0 @ 912MHz - PASS
+Rank0: 1024MB(auto)-2T-13
+DataBus test pass!
+AddrBus test pass!
+-s
+Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x00004000
+New fip structure!
+Load bl30 from eMMC, src: 0x00010200, des: 0x01100000, size: 0x0000d600
+Load bl31 from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00015400
+Load bl33 from eMMC, src: 0x00038200, des: 0x01000000, size: 0x000a9e00
+NOTICE:  BL3-1: v1.0(debug):34b885f
+NOTICE:  BL3-1: Built : 15:32:22, Oct 29 2016
+aml log : bl31 normal boot !
+[Image: gxl_v1.1.3154-065f772 2016-09-29 14:08:54 yan.wang@droid05]
+
+OPS=0x82
+
+6a 4c e1 b6 e8 22 80 9c c1 d b6 da [0.439686 Inits done]
+
+secure task start!
+high task start!
+low task start!
+INFO:    BL3-1: Initializing runtime services
+WARNING: No OPTEE provided by BL2 boot loader
+ERROR:   Error initializing runtime service opteed_fast
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x1000000
+INFO:    BL3-1: Next image spsr = 0x3c9
+U-Boot 2015.01 (Dec 07 2016 - 10:14:37)
+
+DRAM:  1 GiB
+Relocation Offset is: 36ec9000
+register usb cfg[0][1] = 0000000037f5f9a0
+vpu: error: vpu: check dts: FDT_ERR_BADMAGIC, load default parameters
+vpu: clk_level = 7
+vpu: set clk: 666667000Hz, readback: 666660000Hz(0x300)
+vpp: vpp_init
+boot_device_flag : 1
+Nand PHY Ver:1.01.001.0006 (c) 2013 Amlogic Inc.
+init bus_cycle=6, bus_timing=7, system=5.0ns
+reset failed
+get_chip_type and ret:fffffffe
+get_chip_type and ret:fffffffe
+chip detect failed and ret:fffffffe
+nandphy_init failed and ret=0xfffffff1
+MMC:   aml_priv->desc_buf = 0x0000000033ec96b0
+aml_priv->desc_buf = 0x0000000033ecb9d0
+SDIO Port B: 0, SDIO Port C: 1
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+[mmc_startup] mmc refix success
+[mmc_init] mmc init success
+mmc read lba=0x14000, blocks=0x400
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 2 dtbs.
+        aml_dt soc: gxl platform: p212 variant: 1g
+        dtb 0 soc: gxl   plat: p212   vari: 1g
+        dtb 1 soc: gxl   plat: p212   vari: 2g
+      Find match dtb: 0
+start dts,buffer=0000000033ece270,dt_addr=0000000033ecea70
+parts: 11
+00:      logo	0000000002000000 1
+01:  recovery	0000000002000000 1
+02:       rsv	0000000000800000 1
+03:       tee	0000000000800000 1
+04:     crypt	0000000002000000 1
+05:      misc	0000000002000000 1
+06: instaboot	0000000020000000 1
+07:      boot	0000000002000000 1
+08:    system	0000000040000000 1
+09:     cache	0000000020000000 2
+10:      data	ffffffffffffffff 4
+get_dtb_struct: Get emmc dtb OK!
+overide_emmc_partition_table: overide cache 
+[mmc_get_partition_table] skip partition cache.
+Partition table get from SPL is : 
+        name                        offset              size              flag
+===================================================================================
+   0: bootloader                         0            400000                  0
+   1: reserved                     2400000           4000000                  0
+   2: cache                        6c00000          20000000                  2
+   3: env                         27400000            800000                  0
+   4: logo                        28400000           2000000                  1
+   5: recovery                    2ac00000           2000000                  1
+   6: rsv                         2d400000            800000                  1
+   7: tee                         2e400000            800000                  1
+   8: crypt                       2f400000           2000000                  1
+   9: misc                        31c00000           2000000                  1
+  10: instaboot                   34400000          20000000                  1
+  11: boot                        54c00000           2000000                  1
+  12: system                      57400000          40000000                  1
+  13: data                        97c00000         13a400000                  4
+mmc read lba=0x12000, blocks=0x2
+mmc read lba=0x12002, blocks=0x2
+mmc_read_partition_tbl: mmc read partition OK!
+eMMC/TSD partition table have been checked OK!
+mmc env offset: 0x27400000 
+In:    serial
+Out:   serial
+Err:   serial
+reboot_mode=cold_boot
+hpd_state=0
+cvbs performance type = 6, table = 0
+[store]To run cmd[emmc dtb_read 0x1000000 0x40000]
+read emmc dtb
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 2 dtbs.
+        aml_dt soc: gxl platform: p212 variant: 1g
+        dtb 0 soc: gxl   plat: p212   vari: 1g
+        dtb 1 soc: gxl   plat: p212   vari: 2g
+      Find match dtb: 0
+Net:   dwmac.c9410000
+wipe_data=successful
+wipe_cache=successful
+upgrade_step=2
+[OSD]load fb addr from dts
+[OSD]failed to get fb addr for logo
+[OSD]use default fb_addr parameters
+[OSD]fb_addr for logo: 0x3d800000
+[OSD]load fb addr from dts
+[OSD]failed to get fb addr for logo
+[OSD]use default fb_addr parameters
+[OSD]fb_addr for logo: 0x3d800000
+[CANVAS]canvas init
+[CANVAS]addr=0x3d800000 width=3840, height=2160
+amlkey_init() enter!
+[EFUSE_MSG]keynum is 4
+[BL31]: tee size: 0
+[KM]Error:f[key_manage_query_size]L507:key[usid] not programed yet
+[KM]Error:f[key_manage_query_size]L507:key[deviceid] not programed yet
+get_cpu_id flag_12bit=1
+saradc - saradc sub-system
+
+Usage:
+saradc saradc open <channel>		- open a SARADC channel
+saradc close	- close the SARADC
+saradc getval	- get the value in current channel
+saradc get_in_range <min> <max>	- return 0 if current value in the range of current channel
+
+key1 = a857ff00
+key2 = a81bff00
+time_out = 2625a0
+ir init
+irkey - irkey key_value1 key_value2 time_value
+Usage:
+irkey 
+Hit Enter or space or Ctrl+C key to stop autoboot -- :  1  0 
+card out
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+emmc/sd response timeout, cmd1, status=0x1ff2800
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 1 Storage Device(s) found
+reading s905_autoscript
+1351 bytes read in 22 ms (59.6 KiB/s)
+## Executing script at 01020000
+start amlogic old u-boot
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+emmc/sd response timeout, cmd1, status=0x1ff2800
+** Bad device mmc 0 **
+reading boot_android
+** Unable to read file boot_android **
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+emmc/sd response timeout, cmd1, status=0x1ff2800
+** Bad device mmc 0 **
+reading u-boot.ext
+606670 bytes read in 354 ms (1.6 MiB/s)
+## Starting application at 0x01000000 ...
+
+U-Boot 2021.04-00056-g13ac02db31-dirty (Apr 28 2021 - 22:52:02 +0800) p212
+
+Model: Amlogic Meson GXL (S905X) P212 Development Board
+SoC:   Amlogic Meson GXL (S905X) Revision 21:a (82:2)
+DRAM:  1 GiB
+MMC:   mmc@70000: 0, mmc@72000: 1, mmc@74000: 2
+Loading Environment from nowhere... OK
+In:    serial
+Out:   serial
+Err:   serial
+[BL31]: tee size: 0
+[BL31]: tee size: 0
+Net:   eth0: ethernet@c9410000
+Hit any key to stop autoboot:  2  1  0 
+starting USB...
+Bus usb@c9000000: dwc3_meson_gxl_get_phys: usb2 ports: 2
+Register 2000140 NbrPorts 2
+Starting the controller
+USB XHCI 1.00
+scanning bus usb@c9000000 for devices... XHCI timeout on event type 33... cannot recover.
+BUG at drivers/usb/host/xhci-ring.c:481/xhci_wait_for_event()!
+BUG!
+resetting ...
+INFO:    PSCI Affinity Map:
+INFO:      AffInst: Level 0, MPID 0x0, State ON
+INFO:      AffInst: Level 0, MPID 0x1, State OFF
+INFO:      AffInst: Level 0, MPID 0x2, State OFF
+INFO:      AffInst: Level 0, MPID 0x3, State OFF
+bl31 reboot reason: 0xd
+bl31 reboot reason: 0x0
+system cmd  1.
+
+GXL:BL1:9ac50e:a1974b;FEAT:ADFC318C;POC:3;RCY:0;EMMC:0;READ:0;0.0;CHK:0;
+TE: 96228
+
+BL2 Built : 13:48:56, Sep 23 2016. 
+gxl g7459bd4 - jianxin.pan@droid06
+
+set vcck to 1120 mv
+set vddee to 1000 mv
+Board ID = 3
+CPU clk: 1200MHz
+DQS-corr enabled
+DDR scramble enabled
+DDR3 chl: Rank0+1 @ 912MHz - FAIL
+DDR3 chl: Rank0 @ 912MHz - PASS
+Rank0: 1024MB(auto)-2T-13
+DataBus test pass!
+AddrBus test pass!
+-s
+Load fip header from eMMC, src: 0x0000c200, des: 0x01400000, size: 0x00004000
+New fip structure!
+Load bl30 from eMMC, src: 0x00010200, des: 0x01100000, size: 0x0000d600
+Load bl31 from eMMC, src: 0x00020200, des: 0x10100000, size: 0x00015400
+Load bl33 from eMMC, src: 0x00038200, des: 0x01000000, size: 0x000a9e00
+NOTICE:  BL3-1: v1.0(debug):34b885f
+NOTICE:  BL3-1: Built : 15:32:22, Oct 29 2016
+aml log : bl31 normal boot !
+[Image: gxl_v1.1.3154-065f772 2016-09-29 14:08:54 yan.wang@droid05]
+
+OPS=0x82
+
+6a 4c e1 b6 e8 22 80 9c c1 d b6 da [0.439695 Inits done]
+
+secure task start!
+high task start!
+low task start!
+INFO:    BL3-1: Initializing runtime services
+WARNING: No OPTEE provided by BL2 boot loader
+ERROR:   Error initializing runtime service opteed_fast
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address = 0x1000000
+INFO:    BL3-1: Next image spsr = 0x3c9
+
+U-Boot 2015.01 (Dec 07 2016 - 10:14:37)
+
+DRAM:  1 GiB
+Relocation Offset is: 36ec9000
+register usb cfg[0][1] = 0000000037f5f9a0
+vpu: error: vpu: check dts: FDT_ERR_BADMAGIC, load default parameters
+vpu: clk_level = 7
+vpu: set clk: 666667000Hz, readback: 666660000Hz(0x300)
+vpp: vpp_init
+boot_device_flag : 1
+Nand PHY Ver:1.01.001.0006 (c) 2013 Amlogic Inc.
+init bus_cycle=6, bus_timing=7, system=5.0ns
+reset failed
+get_chip_type and ret:fffffffe
+get_chip_type and ret:fffffffe
+chip detect failed and ret:fffffffe
+nandphy_init failed and ret=0xfffffff1
+MMC:   aml_priv->desc_buf = 0x0000000033ec96b0
+aml_priv->desc_buf = 0x0000000033ecb9d0
+SDIO Port B: 0, SDIO Port C: 1
+emmc/sd response timeout, cmd8, status=0x1ff2800
+emmc/sd response timeout, cmd55, status=0x1ff2800
+[mmc_startup] mmc refix success
+[mmc_init] mmc init success
+mmc read lba=0x14000, blocks=0x400
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 2 dtbs.
+        aml_dt soc: gxl platform: p212 variant: 1g
+        dtb 0 soc: gxl   plat: p212   vari: 1g
+        dtb 1 soc: gxl   plat: p212   vari: 2g
+      Find match dtb: 0
+start dts,buffer=0000000033ece270,dt_addr=0000000033ecea70
+parts: 11
+00:      logo	0000000002000000 1
+01:  recovery	0000000002000000 1
+02:       rsv	0000000000800000 1
+03:       tee	0000000000800000 1
+04:     crypt	0000000002000000 1
+05:      misc	0000000002000000 1
+06: instaboot	0000000020000000 1
+07:      boot	0000000002000000 1
+08:    system	0000000040000000 1
+09:     cache	0000000020000000 2
+10:      data	ffffffffffffffff 4
+get_dtb_struct: Get emmc dtb OK!
+overide_emmc_partition_table: overide cache 
+[mmc_get_partition_table] skip partition cache.
+Partition table get from SPL is : 
+        name                        offset              size              flag
+===================================================================================
+   0: bootloader                         0            400000                  0
+   1: reserved                     2400000           4000000                  0
+   2: cache                        6c00000          20000000                  2
+   3: env                         27400000            800000                  0
+   4: logo                        28400000           2000000                  1
+   5: recovery                    2ac00000           2000000                  1
+   6: rsv                         2d400000            800000                  1
+   7: tee                         2e400000            800000                  1
+   8: crypt                       2f400000           2000000                  1
+   9: misc                        31c00000           2000000                  1
+  10: instaboot                   34400000          20000000                  1
+  11: boot                        54c00000           2000000                  1
+  12: system                      57400000          40000000                  1
+  13: data                        97c00000         13a400000                  4
+mmc read lba=0x12000, blocks=0x2
+mmc read lba=0x12002, blocks=0x2
+mmc_read_partition_tbl: mmc read partition OK!
+eMMC/TSD partition table have been checked OK!
+mmc env offset: 0x27400000 
+In:    serial
+Out:   serial
+Err:   serial
+reboot_mode=cold_boot
+hpd_state=0
+cvbs performance type = 6, table = 0
+[store]To run cmd[emmc dtb_read 0x1000000 0x40000]
+read emmc dtb
+      Amlogic multi-dtb tool
+      Multi dtb detected
+      Multi dtb tool version: v2 .
+      Support 2 dtbs.
+        aml_dt soc: gxl platform: p212 variant: 1g
+        dtb 0 soc: gxl   plat: p212   vari: 1g
+        dtb 1 soc: gxl   plat: p212   vari: 2g
+      Find match dtb: 0
+Net:   dwmac.c9410000
+wipe_data=successful
+wipe_cache=successful
+upgrade_step=2
+[OSD]load fb addr from dts
+[OSD]failed to get fb addr for logo
+[OSD]use default fb_addr parameters
+[OSD]fb_addr for logo: 0x3d800000
+[OSD]load fb addr from dts
+[OSD]failed to get fb addr for logo
+[OSD]use default fb_addr parameters
+[OSD]fb_addr for logo: 0x3d800000
+[CANVAS]canvas init
+[CANVAS]addr=0x3d800000 width=3840, height=2160
+amlkey_init() enter!
+[EFUSE_MSG]keynum is 4
+[BL31]: tee size: 0
+[KM]Error:f[key_manage_query_size]L507:key[usid] not programed yet
+[KM]Error:f[key_manage_query_size]L507:key[deviceid] not programed yet
+get_cpu_id flag_12bit=1
+saradc - saradc sub-system
+
+Usage:
+saradc saradc open <channel>		- open a SARADC channel
+saradc close	- close the SARADC
+saradc getval	- get the value in current channel
+saradc get_in_range <min> <max>	- return 0 if current value in the range of current channel
+
+key1 = a857ff00
+key2 = a81bff00
+time_out = 2625a0
+ir init
+......................................................
